@@ -1,0 +1,278 @@
+{% load static %}
+<html>
+<head>
+<!--    <meta charset="UTF-8">-->
+<!--    <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js"
+        integrity="sha512-LUKzDoJKOLqnxGWWIBM4lzRBlxcva2ZTztO8bTcWPmDSpkErWx0bSP4pdsjNH8kiHAUPaT06UXcb+vOEZH+HpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js"
+        integrity="sha512-LUKzDoJKOLqnxGWWIBM4lzRBlxcva2ZTztO8bTcWPmDSpkErWx0bSP4pdsjNH8kiHAUPaT06UXcb+vOEZH+HpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+       
+    <title>Index</title>
+</head>
+<body>
+    
+    <div class="container1">
+        <div class="pageFront">
+            <h2>Credit Card Fraud Detection</h2>
+            <p> Credit card fraud is a serious and global issue or crime committed by fraud using payment cards such as credit cards or debit cards. 
+                The purpose of these fraudsters is to acquire goods without paying or to acquire unauthorised funds from an account. 
+                Survey suggests that a typical organisation loses 5% of yearly revenue due to fraud i.e) Unauthorised account activity by someone who doesn’t belong to. In the Banking or payment industry, fraud is an illegal usage of credit card details without the real cardholder’s knowledge. 
+                A stolen credit card/card number is usually the cause of a fraudulent charge. Once a cardholder sees a payment transaction, he did not make on his credit card statement, he/she has the right to dispute the charge by contacting his/her bank. The bank or Credit Card Company conducts an investigation and returns the money to the cardholder.
+                But what if we can detect fraudulent transaction activity in real-time? This way we can take the required action to stop the same. 
+                We can use machine learning techniques to detect fraudulent transactions.</p>
+        </div>
+       
+            <!-- {% csrf_token %} -->
+
+
+
+
+
+
+
+            
+            <div class="flex justify-content-between inputContent">
+                <div class="col-ms-12">
+                    <h4 id="inputValue" style="color: #fff;">Enter the input values: </h1>
+                    <!-- <input type="text" name="year" class="value" id="value1" placeholder="Enter the values to predict the fraudulent transaction: " /><br> -->
+                    <br/>
+                    <br/><br/>
+                    <label for="time">Time &nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" class="value" name="time" id="time" placeholder="Enter value of time">
+
+                    <label for="v1">&nbsp;&nbsp;&nbsp;&nbsp;V1&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" name="v1" class="value" id="v1" placeholder="Enter value of V1">
+
+                    <label for="v2">&nbsp;&nbsp;&nbsp;&nbsp;V2&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" name="v2" class="value" id="v2" placeholder="Enter value of V2">
+
+                    <label for="v3">&nbsp;&nbsp;&nbsp;&nbsp;V3&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" name="v3" class="value" id="v3" placeholder="Enter value of V3">
+
+                    <br/>
+
+                    <label for="v4">V4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" name="v4" class="value" id="v4" placeholder="Enter value of V4">
+
+                    <label for="v5">&nbsp;&nbsp;&nbsp;&nbsp;V5&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" name="v5" class="value" id="v5" placeholder="Enter value of V5">
+
+                    <label for="v6">&nbsp;&nbsp;&nbsp;&nbsp;V6&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" name="v6" class="value" id="v6" placeholder="Enter value of V6">
+
+                    <label for="v7">&nbsp;&nbsp;&nbsp;&nbsp;V7&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" name="v7" class="value" id="v7" placeholder="Enter value of V7">
+
+                    <br/>
+
+                    <label for="v8">V8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" name="v8" class="value" id="v8" placeholder="Enter value of V8">
+
+                    <label for="v9">&nbsp;&nbsp;&nbsp;&nbsp;V9&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" name="v9" class="value" id="v9" placeholder="Enter value of V9">
+
+                    <label for="v10">&nbsp;&nbsp;&nbsp;&nbsp;V10&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" name="v10" class="value" id="v10" placeholder="Enter value of V10">
+
+                    <label for="v11">&nbsp;&nbsp;&nbsp;&nbsp;V11&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" name="v11" class="value" id="v11" placeholder="Enter value of V11">
+
+                    <br/>
+
+                    <label for="v12">V12&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" name="v12" class="value" id="v12" placeholder="Enter value of V12">
+
+                    <label for="v13">&nbsp;&nbsp;&nbsp;&nbsp;V13&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" name="v13" class="value" id="v13" placeholder="Enter value of V13">
+
+                    <label for="v14">&nbsp;&nbsp;&nbsp;&nbsp;V14&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" name="time" class="value" id="v14" placeholder="Enter value of time">
+
+                    <label for="v15">&nbsp;&nbsp;&nbsp;&nbsp;V15&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" name="v15" class="value" id="v15" placeholder="Enter value of V15">
+
+                    <br/>
+
+                    <label for="v16">V16&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" name="v16" class="value" id="v16" placeholder="Enter value of V16">
+
+                    <label for="v17">&nbsp;&nbsp;&nbsp;&nbsp;V17&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" name="v17" class="value" id="v17" placeholder="Enter value of V17">
+
+                    <label for="v18">&nbsp;&nbsp;&nbsp;&nbsp;V18&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" name="v18" class="value" id="v18" placeholder="Enter value of V18">
+
+                    <label for="v19">&nbsp;&nbsp;&nbsp;&nbsp;V19&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" name="v19" class="value" id="v19" placeholder="Enter value of V19">
+
+                    <br/>
+
+                    <label for="v20">V20&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" name="v20" class="value" id="v20" placeholder="Enter value of V20">
+
+                    <label for="v21">&nbsp;&nbsp;&nbsp;&nbsp;V21&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" name="v21" class="value" id="v21" placeholder="Enter value of V21">
+
+                    <label for="v22">&nbsp;&nbsp;&nbsp;&nbsp;V22&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" name="v22" class="value" id="v22" placeholder="Enter value of V22">
+
+                    <label for="v23">&nbsp;&nbsp;&nbsp;&nbsp;V23&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" name="v23" class="value" id="v23" placeholder="Enter value of V23">
+
+                    <br/>
+
+                    <label for="v24">V24&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" name="v24" class="value" id="v24" placeholder="Enter value of V24">
+
+                    <label for="v25">&nbsp;&nbsp;&nbsp;&nbsp;V25&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" name="v25" class="value" id="v25" placeholder="Enter value of V25">
+
+                    <label for="v26">&nbsp;&nbsp;&nbsp;&nbsp;V26&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" name="v26" class="value" id="v26" placeholder="Enter value of V26">
+
+                    <label for="v27">&nbsp;&nbsp;&nbsp;&nbsp;V27&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" name="v27" class="value" id="v27" placeholder="Enter value of V27">
+
+                    <br/>
+
+                    <label for="v28">V28&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" name="v28" class="value" id="v28" placeholder="Enter value of V28">
+
+                    <label for="amount">Amount&nbsp;</label>
+                    <input type="text" name="amount" class="value" id="amount" placeholder="Enter value of Amount">
+                    <br/>
+                    <!-- <input style=" margin-top:40px;width: 10%; color: black; background-color: #ddd; padding: 15px; border-radius: 5px; margin-left: 500px;"type="submit" class="value" placeholder="Submit"><br> -->
+                    <input style="color: black;"  id ="output" type="submit" class="value" placeholder="Submit:">
+                    <!-- <a href="{% url 'report' %}">result</a> -->
+                    <h4  style="color: rgb(0, 0, 0) ;" id="answer">{{result}}</h4>
+                    <br/>
+                    <h4  style="color: white ;display :none;" id="answer"></h4>
+     
+                </div>
+            </div>     
+    </div>
+    <script src="{% static 'js/credit.js' %}"></script>
+</body>
+<!-- <script>
+    async function postRequestAPIPredict(url, category, data) {
+        // axios.defaults.headers.common['X-CSRFToken'] = data['csrf_token'];
+        // token.push(data['csrf_token'])
+        axios.post(url, {
+            method: 'POST',
+            mode: 'cors',
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                'Content-Type': 'application/json',
+            },
+            data
+        }).then(res => {
+            if (category == 'predict') {
+                // console.log(res.data['result'])
+                console.log(data+"aruna");
+                // location.href="{% url 'result' %}"
+                document.getElementById("answer").innerHTML=res.data['result']
+                document.getElementById("answer").style.display="block";
+                
+                
+            }
+        }
+        )
+    }
+    async function postRequestAPI(url, category, data) {
+        // axios.defaults.headers.common['X-CSRFToken'] = data['csrf_token'];
+        // token.push(data['csrf_token'])
+        // console.log(data)
+        axios.post(url, {
+            method: 'POST',
+            mode: 'cors',
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                'Content-Type': 'application/json',
+            },
+            data
+        }).then(res => {
+         
+            if (category == 'output') {
+                console.log("saved")
+            }
+            if (category == 'predict') {
+                console.log(data+"aruna")
+                document.getElementById("answer").innerHTML=res.data['result']
+                document.getElementById("answer").style.display="block";  
+            }
+        }
+        )
+    }
+
+    document.getElementById("output").onclick = function() {
+        var entire_dataset="";
+        const datas={
+                // 'csrf_token':$("input[name=csrfmiddlewaretoken]").val(),
+                'Time':document.getElementById("time").value,
+                'V1':document.getElementById("v1").value,
+                'V2':document.getElementById("v2").value,
+                'V3':document.getElementById("v3").value,
+                'V4':document.getElementById("v4").value,
+                'V5':document.getElementById("v5").value,
+                'V6':document.getElementById("v6").value,
+                'V7':document.getElementById("v7").value,
+                'V8':document.getElementById("v8").value,
+                'V9':document.getElementById("v9").value,
+                'V10':document.getElementById("v10").value,
+                'V11':document.getElementById("v11").value,
+                'V12':document.getElementById("v12").value,
+                'V13':document.getElementById("v13").value,
+                'V14':document.getElementById("v14").value,
+                'V15':document.getElementById("v15").value,
+                'V16':document.getElementById("v16").value,
+                'V17':document.getElementById("v17").value,
+                'V18':document.getElementById("v18").value,
+                'V19':document.getElementById("v19").value,
+                'V20':document.getElementById("v20").value,
+                'V21':document.getElementById("v21").value,
+                'V22':document.getElementById("v22").value,
+                'V23':document.getElementById("v23").value,
+                'V24':document.getElementById("v24").value,
+                'V25':document.getElementById("v25").value,
+                'V26':document.getElementById("v26").value,
+                'V27':document.getElementById("v27").value,
+                'V28':document.getElementById("v28").value,
+                'Amount':document.getElementById("amount").value,
+                // 'csv_data':Time+V1
+                // 'output':Time+","
+            }
+            var val=Object.values(datas);
+            for(var i in val){
+                if(i<val.length-1){
+                    entire_dataset+=val[i]+",";
+                }  
+                else{
+                    entire_dataset+=val[i];
+                }         
+             }
+            
+            const data={
+                'entire_data':entire_dataset,
+                'datas':datas
+            }
+      
+        postRequestAPI("http://127.0.0.1:8000/result/", "output", data)
+        postRequestAPI("http://127.0.0.1:8000/predicte/", "predict", data)
+
+    }
+    // document.getElementById("output").onclick=function(){
+    //     const datas = document.getElementById('value1').value;
+    //     const data = {
+           
+    //         'data': datas,
+    //     }
+    //     postRequestAPI("http://127.0.0.1:8000/result/", "output", data)
+    // }
+</script> -->
+</html>
